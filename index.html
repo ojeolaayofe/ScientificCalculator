@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>real</title>
+</head>
+<script>
+function power(a)
+		{
+			if(a=="ON")
+              {
+				 document.getElementById("screen").value=0;
+				 document.getElementById("power").value="OFF";
+		    	}
+			else
+			  {
+	 	document.getElementById("screen").value="";
+      	 document.getElementById("power").value="ON";
+        	 }
+          }
+   function  numba(n)
+          {
+	   			var power=document.getElementById("power").value;
+	   			if(power=="ON")
+	       			 {
+		 			alert  ("pls  switch on the calculator");
+	           		 }
+         		 else
+				 {
+					 var screen=document.getElementById("screen").value;
+					 if  (screen=="0")
+	        			  {
+							 document.getElementById("screen").value=n;
+	         			  }
+	        		 else
+	      				  {
+	   						  document.getElementById("screen").value+=n;
+           				   }
+				 }
+		  }
+			  
+			var fv="";
+			var up="";
+			function opera(a)
+			     {
+					// alert (123);
+			fv=document.getElementById("screen").value;
+			up = a;
+			document.getElementById("screen").value = "";
+			       }
+			          function equels(sv)
+			      { 
+				 // alert (123);
+			        var sv=document.getElementById("screen").value;
+				     if(up=="+")
+				       {
+				       var a=parseInt(fv)   +   parseInt(sv);
+				      document.getElementById("screen").value=a
+				       }
+				   else if(up=="-") 
+				        {
+					    var a=parseInt(fv)   -  parseInt(sv);
+				      document.getElementById("screen").value=a
+					  }
+					  else if(up=="/")
+					  {
+					    var a=parseInt(fv)   /  parseInt(sv);
+				      document.getElementById("screen").value=a
+					  }
+					  else
+					  {
+					    var a=parseInt(fv)   *  parseInt(sv);
+				      document.getElementById("screen").value=a
+					  }
+				  }
+				  
+				var fv="";
+				var up="";
+				function sin(s)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=s;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)/10.66
+				}
+				
+				var fv="";
+				var up="";
+				function cos(c)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=c;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)/0.66
+				}
+				
+				var fv="";
+				var up="";
+				function tan(t)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=t;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)/0.62
+				}
+				
+				var fv="";
+				var up="";
+				function log(l)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=l;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)/20.2
+				}
+				
+				var fv="";
+				var up="";
+				function log2(l)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=l;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)*20.2
+				}
+				
+				var fv="";
+				var up="";
+				function multi1(m)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=m;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)*2
+				}
+				
+				var fv="";
+				var up="";
+				function multi3(m)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=m;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)*3
+				}
+				
+				var fv="";
+				var up="";
+				function div(m)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=m;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)/2
+				}
+				
+				var fv="";
+				var up="";
+				function per(p)
+				{
+					//alert("done")
+					fv=document.getElementById("screen").value;
+					up=p;
+					document.getElementById("screen").value;
+					document.getElementById("screen").value=parseInt(fv)/100
+				}
+				
+				var fv="";
+				var up="";
+				var arra=[];
+				function delette(b)
+				{
+				  //alert("done")
+					document.getElementById("screen").value=0;
+				}
+				
+		
+	
+</script>
+
+<style>
+table     { border-radius:12px; border-color:#FF0000; background-color:indigo;}
+#screen   {font-size:50px; text-align:right; color:#000;}
+.button   { width:70px; height:55px; color:#0F3; background-color:#122E2E;}
+</style>
+
+<body>
+
+<table width="300" align="center"  height="550" border="3px">
+  <tr>
+    <td colspan="5" rowspan="4"><input type="text"  id="screen" style="width:430px; height:90px; 
+                                      border:2px solid #996; border-radius:15px;"/></td>
+    
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr>
+   
+  </tr>
+   <tr style="border-radius:10px;">
+    <td align="center" bgcolor="#E1E4FC"><input type="button"  class="button" id="power" onclick="power(this.value)" value="ON" ></button></td>
+    <td align="center"><input type="button"  class="button" value="SIN" onclick="sin('sin')" /></td>
+    <td align="center"><input type="button"  class="button" value="COS" onclick="cos('cos')"/></td>
+    <td align="center"><input type="button"  class="button" value="TAN" onclick="tan('tan')" /></td>
+    <td align="center"><input type="button"  class="button" value="C" onclick="delette('C')" /></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button"  class="button"     onclick="numba(9)"value="9" /></td>
+    <td align="center"><input type="button"  class="button"     onclick="numba(8)"   value="8" /></td>
+    <td align="center"><input type="button"  class="button"     onclick="numba(7)" value="7" /></td>
+    <td align="center"><input type="button"  class="button"     value="&larr;" /></td>                 
+    <td align="center"> <input type="button" class="button"     value=" LOG" onclick="log('log')" /></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button"  class="button"    value="6"   onclick="numba(6)" /></td>
+    <td align="center"><input type="button"  class="button"    value="5"   onclick="numba(5)"/></td>
+    <td align="center"><input type="button"  class="button"    value="4"   onclick="numba(4)" /></td>
+    <td align="center"><input type="button"  class="button"    value="0"   onclick="numba(0)" /></td>
+    <td align="center"><input type="button"  class="button"    value=" LOG–¹" onclick="log2('LOG–¹')" /></td>    
+  </tr>
+  <tr>
+    <td align="center"><input type="button"  class="button"     value="3"  onclick="numba(3)"/></td>
+    <td align="center"><input type="button"  class="button"     value="2"  onclick="numba(2)"/></td>
+    <td align="center"><input type="button"  class="button"     value="1"  onclick="numba(1)"/></td>
+    <td align="center"><input type="button"  class="button"     value=" M+" /></td>
+    <td align="center"><input type="button"  class="button"     value=" M-" /></td>
+  </tr>
+   <tr>
+   <td align="center"><input  type="button"  class="button"  value="X&sup2" onclick="multi1('X&sup2')" /></td>
+    <td align="center"><input type="button"  class="button"  value="X&sup3" onclick="multi3('X&sup3')" /></td>
+    <td align="center"><input type="button"  class="button"  value="/"  onclick="opera('/')"/></td>
+    <td align="center"><input type="button"  class="button"  value="+"         onclick="opera('+')"/></td>
+    <td align="center"><input type="button"  class="button"  value="-"         onclick="opera('-')"/></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button"  class="button"  value="shift" /></td>
+    <td align="center"><input type="button"  class="button"  value="&radic;" onclick="div('&radic;')" /></td>
+    <td align="center"><input type="button"  class="button"  value="%"         onclick="per('%')" /></td>
+    <td align="center"><input type="button"  class="button"  value="&times;"   onclick="opera('&times;')" /></td>
+    <td align="center"><input type="button"  class="button"  value="="         onclick="equels('=')"/></td>
+    
+  </tr>
+</table>
+
+</body>
+</html>
